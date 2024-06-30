@@ -4,8 +4,6 @@ import 'package:midwest/view/gallary/gallary.dart';
 import 'package:midwest/view/home/home_page.dart';
 import 'package:midwest/view/register_team/register_team.dart';
 import 'package:midwest/view/robowar/robowar.dart';
-
-import '../../../res/app_images.dart';
 import 'app_bar_button.dart';
 
 class TopAppBar extends StatelessWidget {
@@ -22,22 +20,22 @@ class TopAppBar extends StatelessWidget {
           // SizedBox(width: 20,),
          MediaQuery.sizeOf(context).width>740?  Expanded(child: Container(
             height: 70,
-            decoration: BoxDecoration(
-              color: Color(0xffdf0600),
+            decoration: const BoxDecoration(
+              color: const Color(0xffdf0600),
                 // image: DecorationImage(
                 //     image: AssetImage(AppImages.oneSideRect,),
                 //     fit: BoxFit.fill
                 // )
             ),
       
-            padding: EdgeInsets.symmetric(horizontal: 20),
+            padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Row(
               // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                SizedBox(width: 20,),
+                const SizedBox(width: 20,),
                 InkWell(
                   onTap: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage(),));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const HomePage(),));
                   },
                   child: Image.asset('assets/images/IMG_20240304_183205_023.png',
                     width: 80,
@@ -45,21 +43,21 @@ class TopAppBar extends StatelessWidget {
                     height: 40,
                   ),
                 ),
-                Spacer(),
+                const Spacer(),
                 // AppBarButton(title: 'CALENDER',),
-                SizedBox(width: 20,),
+                const SizedBox(width: 20,),
                 AppBarButton(title: 'REGISTER',
-                onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => RegisterTeam(),)),
+                onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const RegisterTeam(),)),
                 ),
-                SizedBox(width: 20,),
+                const SizedBox(width: 20,),
       
                 // onTap: () => RegisterTeam.showPage(context: context),),
                 AppBarButton(title: 'RoboWar',onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => RoboWar(),)),),
-                SizedBox(width: 20,),
-                AppBarButton(title: 'GALLERY',onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => Gallery(),)),),
-                SizedBox(width: 20,),
-                AppBarButton(title: 'ABOUT',onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => AboutPage(),)),),
-                SizedBox(width: 20,),
+                const SizedBox(width: 20,),
+                AppBarButton(title: 'GALLERY',onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const Gallery(),)),),
+                const SizedBox(width: 20,),
+                AppBarButton(title: 'ABOUT',onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const AboutPage(),)),),
+                const SizedBox(width: 20,),
               ],
             ),
           ))
@@ -67,17 +65,17 @@ class TopAppBar extends StatelessWidget {
             child: Container(
               height: 70,
               width: MediaQuery.sizeOf(context).width,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Colors.red,
               ),
               child: Align(
                 alignment: Alignment.centerRight,
                 child: Row(
                   children: [
-                    SizedBox(width: 20,),
+                    const SizedBox(width: 20,),
                     InkWell(
                       onTap: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage(),));
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => const HomePage(),));
                       },
                       child: Image.asset('assets/images/IMG_20240304_183205_023.png',
                         width: 80,
@@ -85,7 +83,7 @@ class TopAppBar extends StatelessWidget {
                         height: 40,
                       ),
                     ),
-                    Spacer(),
+                    const Spacer(),
                     InkWell(
                       onTap: () {
                         Scaffold.of(context).openDrawer();
@@ -93,10 +91,10 @@ class TopAppBar extends StatelessWidget {
                       child: Container(
       
                        alignment: Alignment.center,
-                       child: Icon(Icons.menu,color: Colors.white,),
+                       child: const Icon(Icons.menu,color: Colors.white,),
                                ),
                     ),
-                    SizedBox(width: 20,)
+                    const SizedBox(width: 20,)
                   ],
                 ),
               ),

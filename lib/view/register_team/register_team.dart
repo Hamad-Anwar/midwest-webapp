@@ -26,7 +26,7 @@ class _RegisterTeamState extends State<RegisterTeam> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    Timer(Duration(milliseconds: 100), () {
+    Timer(const Duration(milliseconds: 100), () {
       try{
         homeVideoController.pause();
         aboutVideoPlayer.pause();
@@ -111,9 +111,9 @@ class _RegisterTeamState extends State<RegisterTeam> {
                                       if (MediaQuery.sizeOf(context).width > 860)
                                         Container(
                                           width: 400,
-                                          padding: EdgeInsets.symmetric(
+                                          padding: const EdgeInsets.symmetric(
                                               horizontal: 20),
-                                          decoration: BoxDecoration(
+                                          decoration: const BoxDecoration(
                                               image: DecorationImage(
                                                   image: AssetImage(
                                                       'assets/images/360_F_244744420_ATNppnCCOUqMhdim2LXyxbWwYuskTjnU.jpg'),
@@ -126,7 +126,7 @@ class _RegisterTeamState extends State<RegisterTeam> {
                                             crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                             children: [
-                                              SizedBox(
+                                              const SizedBox(
                                                 height: 30,
                                               ),
                                               Center(
@@ -134,78 +134,78 @@ class _RegisterTeamState extends State<RegisterTeam> {
                                                       'assets/images/logo.png',
                                                     width: 60,
                                                   )),
-                                              SizedBox(
+                                              const SizedBox(
                                                 height: 20,
                                               ),
-                                              Text('INFORMATION',
+                                              const Text('INFORMATION',
                                                   style: TextStyle(
                                                       color: Colors.white,
                                                       fontWeight: FontWeight.bold,
                                                       fontSize: 20)),
-                                              SizedBox(
+                                              const SizedBox(
                                                 height: 30,
                                               ),
-                                              Text(
+                                              const Text(
                                                 '1.First filling up the registration form and check your registered email id for your Roboclub Id.',
                                                 style: TextStyle(
                                                     fontSize: 12,
                                                     color: Colors.white),
                                               ),
-                                              SizedBox(
+                                              const SizedBox(
                                                 height: 10,
                                               ),
-                                              Text(
+                                              const Text(
                                                 '2.After registration go to login panel and update profile is mandatory',
                                                 style: TextStyle(
                                                     fontSize: 12,
                                                     color: Colors.white),
                                               ),
-                                              SizedBox(
+                                              const SizedBox(
                                                 height: 30,
                                               ),
-                                              Text('PASSWORD INSTRUCTIONS',
+                                              const Text('PASSWORD INSTRUCTIONS',
                                                   style: TextStyle(
                                                       color: Colors.white,
                                                       fontWeight: FontWeight.bold,
                                                       fontSize: 20)),
-                                              SizedBox(
+                                              const SizedBox(
                                                 height: 10,
                                               ),
-                                              Text(
+                                              const Text(
                                                 '1.At least 8 characters the more characters, the better',
                                                 style: TextStyle(
                                                     fontSize: 12,
                                                     color: Colors.white),
                                               ),
-                                              SizedBox(
+                                              const SizedBox(
                                                 height: 10,
                                               ),
-                                              Text(
+                                              const Text(
                                                 '2.A mixture of both uppercase and lowercase letters',
                                                 style: TextStyle(
                                                     fontSize: 12,
                                                     color: Colors.white),
                                               ),
-                                              SizedBox(
+                                              const SizedBox(
                                                 height: 10,
                                               ),
-                                              Text(
+                                              const Text(
                                                 '3.A mixture of letters and numbers',
                                                 style: TextStyle(
                                                     fontSize: 12,
                                                     color: Colors.white),
                                               ),
-                                              SizedBox(
+                                              const SizedBox(
                                                 height: 10,
                                               ),
-                                              Text(
+                                              const Text(
                                                 '4.Inclusion of at least one special character, e.g., ! @ # ? ]' +
                                                     'do not use < or > in your password, as both can cause problems in Web browsers',
                                                 style: TextStyle(
                                                     fontSize: 12,
                                                     color: Colors.white),
                                               ),
-                                              SizedBox(
+                                              const SizedBox(
                                                 height: 50,
                                               ),
                                               Row(
@@ -222,7 +222,7 @@ class _RegisterTeamState extends State<RegisterTeam> {
                                                   //   child: Text('Login',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
                                                   // ),
                                                   Container(
-                                                    padding: EdgeInsets.symmetric(
+                                                    padding: const EdgeInsets.symmetric(
                                                         horizontal: 20,
                                                         vertical: 10),
                                                     decoration: BoxDecoration(
@@ -232,7 +232,7 @@ class _RegisterTeamState extends State<RegisterTeam> {
                                                           10),
                                                     ),
                                                     alignment: Alignment.center,
-                                                    child: Text(
+                                                    child: const Text(
                                                       'Guidelines for Registration',
                                                       style: TextStyle(
                                                           color: Colors.black,
@@ -248,23 +248,23 @@ class _RegisterTeamState extends State<RegisterTeam> {
                                       Expanded(
                                           child: SingleChildScrollView(
                                             child: Padding(
-                                              padding: EdgeInsets.symmetric(
+                                              padding: const EdgeInsets.symmetric(
                                                   horizontal: 20),
                                               child: Form(
                                                 key: controller.formKey,
-                                                child: controller.registerEvents? RegisterEvent():
+                                                child: controller.registerEvents? const RegisterEvent():
                                                 Column(
                                                   mainAxisAlignment:
                                                   MainAxisAlignment.start,
                                                   crossAxisAlignment:
                                                   CrossAxisAlignment.start,
                                                   children: [
-                                                    SizedBox(
+                                                    const SizedBox(
                                                       height: 20,
                                                     ),
                                                     Row(
                                                       children: [
-                                                        Expanded(child: Text(
+                                                        const Expanded(child: Text(
                                                           'Robowar Team Registration page',
                                                           style: TextStyle(
                                                               color: Colors.black,
@@ -273,10 +273,10 @@ class _RegisterTeamState extends State<RegisterTeam> {
                                                         ),),
                                                         InkWell(
                                                             onTap: () => Navigator.pop(context),
-                                                            child: Icon(Icons.close,color: Colors.black,)),
+                                                            child: const Icon(Icons.close,color: Colors.black,)),
                                                       ],
                                                     ),
-                                                    SizedBox(
+                                                    const SizedBox(
                                                       height: 10,
                                                     ),
                                                     InputField(
@@ -285,7 +285,7 @@ class _RegisterTeamState extends State<RegisterTeam> {
                                                       hint: 'Institute Name',
                                                       title: 'Institute/School Name',
                                                     ),
-                                                    SizedBox(
+                                                    const SizedBox(
                                                       height: 10,
                                                     ),
                                                     Row(
@@ -298,7 +298,7 @@ class _RegisterTeamState extends State<RegisterTeam> {
                                                             title: 'Person',
                                                           ),
                                                         ),
-                                                        SizedBox(
+                                                        const SizedBox(
                                                           width: 10,
                                                         ),
                                                         Expanded(
@@ -319,7 +319,7 @@ class _RegisterTeamState extends State<RegisterTeam> {
                                                         ),
                                                       ],
                                                     ),
-                                                    SizedBox(
+                                                    const SizedBox(
                                                       height: 10,
                                                     ),
                                                     InputField(
@@ -327,7 +327,7 @@ class _RegisterTeamState extends State<RegisterTeam> {
                                                       hint: 'Team ID',
                                                       title: 'Team Id',
                                                     ),
-                                                    SizedBox(
+                                                    const SizedBox(
                                                       height: 10,
                                                     ),
                                                     Row(
@@ -350,7 +350,7 @@ class _RegisterTeamState extends State<RegisterTeam> {
                                                             },
                                                           ),
                                                         ),
-                                                        SizedBox(
+                                                        const SizedBox(
                                                           width: 10,
                                                         ),
                                                         Expanded(
@@ -369,13 +369,13 @@ class _RegisterTeamState extends State<RegisterTeam> {
                                                                 height: 40,
                                                                 width: 20,
                                                                 decoration:
-                                                                BoxDecoration(
+                                                                const BoxDecoration(
                                                                   color:
                                                                   Colors.black12,
                                                                 ),
                                                                 alignment:
                                                                 Alignment.center,
-                                                                child: Icon(
+                                                                child: const Icon(
                                                                   Icons
                                                                       .remove_red_eye_outlined,
                                                                   size: 15,
@@ -386,7 +386,7 @@ class _RegisterTeamState extends State<RegisterTeam> {
                                                         ),
                                                       ],
                                                     ),
-                                                    SizedBox(
+                                                    const SizedBox(
                                                       height: 10,
                                                     ),
                                                     Row(
@@ -399,7 +399,7 @@ class _RegisterTeamState extends State<RegisterTeam> {
                                                             title: 'Country',
                                                           ),
                                                         ),
-                                                        SizedBox(
+                                                        const SizedBox(
                                                           width: 10,
                                                         ),
                                                         Expanded(
@@ -412,7 +412,7 @@ class _RegisterTeamState extends State<RegisterTeam> {
                                                         ),
                                                       ],
                                                     ),
-                                                    SizedBox(
+                                                    const SizedBox(
                                                       height: 10,
                                                     ),
                                                     Row(
@@ -425,7 +425,7 @@ class _RegisterTeamState extends State<RegisterTeam> {
                                                             title: 'City',
                                                           ),
                                                         ),
-                                                        SizedBox(
+                                                        const SizedBox(
                                                           width: 10,
                                                         ),
                                                         Expanded(child:
@@ -433,7 +433,7 @@ class _RegisterTeamState extends State<RegisterTeam> {
                                                         Container(),),
                                                       ],
                                                     ),
-                                                    SizedBox(
+                                                    const SizedBox(
                                                       height: 10,
                                                     ),
 
@@ -448,7 +448,7 @@ class _RegisterTeamState extends State<RegisterTeam> {
                                                                 Expanded(child: InputField(title: index==0? 'Captain Name' : 'Player ${index+1} Name', hint: index==0? 'Enter Captain Name' :  'Enter player${index+1} name',
                                                                 controller: controller.players[index]['name'],
                                                                 )),
-                                                                SizedBox(width: 10,),
+                                                                const SizedBox(width: 10,),
                                                                 Expanded(child: InputField(title: index==0? 'Captain Email' : 'Player ${index+1} Email', hint:index==0? 'Enter captain email' : 'Enter player${index+1} email',
                                                                   controller: controller.players[index]['email'],
                                                                   validator: (p0) {
@@ -462,7 +462,7 @@ class _RegisterTeamState extends State<RegisterTeam> {
                                                             ),
                                                           );
                                                         },),
-                                                    SizedBox(
+                                                    const SizedBox(
                                                       height: 10,
                                                     ),
                                                     const Text(
@@ -472,7 +472,7 @@ class _RegisterTeamState extends State<RegisterTeam> {
                                                         fontSize: 10,
                                                       ),
                                                     ),
-                                                    SizedBox(
+                                                    const SizedBox(
                                                       height: 10,
                                                     ),
                                                     Row(
@@ -483,7 +483,7 @@ class _RegisterTeamState extends State<RegisterTeam> {
                                                             child: ElevatedButton(
                                                                 style: ButtonStyle(
                                                                     backgroundColor:
-                                                                    MaterialStatePropertyAll(
+                                                                    const MaterialStatePropertyAll(
                                                                         Colors.blue),
                                                                     shape: MaterialStatePropertyAll(
                                                                         RoundedRectangleBorder(
@@ -503,14 +503,14 @@ class _RegisterTeamState extends State<RegisterTeam> {
                                                                 )),
                                                           ),
                                                         ),
-                                                        SizedBox(width: 10,),
+                                                        const SizedBox(width: 10,),
                                                         Expanded(child: SizedBox(
                                                           height: 35,
                                                           width: 180,
                                                           child: ElevatedButton(
                                                               style: ButtonStyle(
                                                                   backgroundColor:
-                                                                  MaterialStatePropertyAll(
+                                                                  const MaterialStatePropertyAll(
                                                                       Colors.blue),
                                                                   shape: MaterialStatePropertyAll(
                                                                       RoundedRectangleBorder(
@@ -527,10 +527,10 @@ class _RegisterTeamState extends State<RegisterTeam> {
                                                               },
                                                               child: Consumer<RegisterTeamController>(
                                                                 builder: (context, value, child) {
-                                                                  return value.loading?Center(
+                                                                  return value.loading?const Center(
                                                                     child: SizedBox(height: 15,width: 15,
                                                                       child: CircularProgressIndicator(color: Colors.white,),),
-                                                                  ) : Center(
+                                                                  ) : const Center(
                                                                     child: Text(
                                                                       'Register',
                                                                       style: TextStyle(height: 0, color: Colors.white,fontFamily: ''),
@@ -542,14 +542,14 @@ class _RegisterTeamState extends State<RegisterTeam> {
                                                         ),),
                                                       ],
                                                     ),
-                                                    SizedBox(
+                                                    const SizedBox(
                                                       height: 20,
                                                     ),
                                                     InkWell(
                                                       onTap: () {
                                                         controller.changeRegister(value: true);
                                                       },
-                                                      child: Text.rich(TextSpan(children: [
+                                                      child: const Text.rich(TextSpan(children: [
                                                         TextSpan(
                                                             text: 'Click here to ',
                                                             style: TextStyle(
@@ -565,7 +565,7 @@ class _RegisterTeamState extends State<RegisterTeam> {
                                                         )
                                                       ])),
                                                     ),
-                                                    SizedBox(
+                                                    const SizedBox(
                                                       height: 80,
                                                     ),
                                                   ],

@@ -1,13 +1,8 @@
 import 'dart:async';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:midwest/view/home/components/home_section_video.dart';
 import 'package:midwest/view_model/controller/home_controller.dart';
 import 'package:pod_player/pod_player.dart';
 import 'package:provider/provider.dart';
-import 'package:youtube_player_iframe/youtube_player_iframe.dart';
-
 import '../../../res/app_images.dart';
 import '../../buy_ticket/buy_ticket.dart';
 import 'app_bar.dart';
@@ -26,7 +21,7 @@ class _HomeSectionState extends State<HomeSection> with RouteAware{
   void initState() {
     super.initState();
       homeVideoController = PodPlayerController(
-        podPlayerConfig: PodPlayerConfig(
+        podPlayerConfig: const PodPlayerConfig(
           autoPlay: false,
         ),
         playVideoFrom: PlayVideoFrom.network(
@@ -39,7 +34,7 @@ class _HomeSectionState extends State<HomeSection> with RouteAware{
             (value) {
           setState(() {
             isInit=true;
-            Timer(Duration(seconds: 1), () => homeVideoController.play(),);
+            Timer(const Duration(seconds: 1), () => homeVideoController.play(),);
           });
         },
       );
@@ -71,7 +66,7 @@ class _HomeSectionState extends State<HomeSection> with RouteAware{
         width: double.infinity,
         decoration: BoxDecoration(
             color: Colors.white.withOpacity(.02),
-            border: Border(
+            border: const Border(
                 // bottom: BorderSide(color: Colors.white12,width: 2),
 
                 )),
@@ -128,10 +123,10 @@ class _HomeSectionState extends State<HomeSection> with RouteAware{
               mainAxisAlignment:MediaQuery.sizeOf(context).width <= 1130?MainAxisAlignment.start: MainAxisAlignment.center,
               crossAxisAlignment: MediaQuery.sizeOf(context).width <= 1130?CrossAxisAlignment.start: CrossAxisAlignment.center,
               children: [
-                SizedBox(height: 70,),
+                const SizedBox(height: 70,),
                 if (MediaQuery.sizeOf(context).width <= 1130)
                   Scaffold.of(context).isDrawerOpen
-                      ? SizedBox()
+                      ? const SizedBox()
                       : Consumer<HomeController>(
                           builder: (context, value, child) {
                             return isInit
@@ -162,7 +157,7 @@ class _HomeSectionState extends State<HomeSection> with RouteAware{
                                 : MediaQuery.sizeOf(context).width >600? 400 : 250,
                               width: double.infinity,
                               color: Colors.black,
-                              child: Center(
+                              child: const Center(
                                 child: CircularProgressIndicator(
                                   color: Colors.white,
                                   strokeWidth: 1,
@@ -172,7 +167,7 @@ class _HomeSectionState extends State<HomeSection> with RouteAware{
                           },
                         ),
                 if (MediaQuery.sizeOf(context).width <= 1130)
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                 Container(
@@ -184,7 +179,7 @@ class _HomeSectionState extends State<HomeSection> with RouteAware{
                         child: SizedBox(
                           width: 400,
                           child: Container(
-                            padding: EdgeInsets.only(left: 20),
+                            padding: const EdgeInsets.only(left: 20),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -208,7 +203,7 @@ class _HomeSectionState extends State<HomeSection> with RouteAware{
                                       fontSize: 10,
                                       fontFamily: ''),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 20,
                                 ),
 
@@ -242,7 +237,7 @@ class _HomeSectionState extends State<HomeSection> with RouteAware{
                                 height: MediaQuery.sizeOf(context).height - 400,
                                 width: double.infinity,
                                 color: Colors.black,
-                                child: Center(
+                                child: const Center(
                                   child: CircularProgressIndicator(
                                     color: Colors.white,
                                     strokeWidth: 1,
@@ -253,10 +248,10 @@ class _HomeSectionState extends State<HomeSection> with RouteAware{
                           ),
                         ),
                       MediaQuery.sizeOf(context).width > 1130
-                          ? SizedBox(
+                          ? const SizedBox(
                               width: 100,
                             )
-                          : SizedBox(
+                          : const SizedBox(
                               width: 20,
                             )
                     ],
@@ -288,19 +283,19 @@ class _HomeSectionState extends State<HomeSection> with RouteAware{
                   onTap: () => Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => BuyTicket(),
+                        builder: (context) => const BuyTicket(),
                       )),
                   child: Container(
                     height: 40,
                     width: 200,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                         image: DecorationImage(
                             fit: BoxFit.fill,
                             image: AssetImage(
                               AppImages.buttonBg,
                             ))),
                     alignment: Alignment.center,
-                    child: Text(
+                    child: const Text(
                       'Book Ticket',
                       style: TextStyle(
                           fontFamily: '',
@@ -384,12 +379,12 @@ class _HomeSectionState extends State<HomeSection> with RouteAware{
               child: Container(
                 height: 70,
                 color: Colors.black,
-                child: Column(
+                child: const Column(
                   children: [
                     // const SizedBox(
                     //   height: 10,
                     // ),
-                    const TopAppBar(),
+                    TopAppBar(),
                   ],
                 ),
               ),

@@ -26,17 +26,17 @@ class InputField extends StatelessWidget {
           children: [
             Text(
               title,
-              style: TextStyle(
+              style: const TextStyle(
                 fontWeight: FontWeight.bold,
                 fontFamily: '',
                 fontSize: 12
               ),
             ),
-            SizedBox(
+            const SizedBox(
               width: 3,
             ),
-            Padding(
-              padding: const EdgeInsets.only(top: 3),
+            const Padding(
+              padding: EdgeInsets.only(top: 3),
               child: Text(
                 '*',
                 style: TextStyle(color: Colors.red, fontSize: 14,fontFamily: ''),
@@ -46,7 +46,7 @@ class InputField extends StatelessWidget {
         ),
         SizedBox(
           child: TextFormField(
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 12
             ),
             validator: validator??(value){
@@ -60,29 +60,29 @@ class InputField extends StatelessWidget {
             onChanged: onChanged,
             decoration: InputDecoration(
                 hintText: hint,
-                hintStyle: TextStyle(
+                hintStyle: const TextStyle(
                     color: Colors.grey,
                     height: 0,
                     fontFamily: '',
                     fontSize: 10,
                     fontWeight: FontWeight.bold),
                 suffixIcon: sufix,
-                contentPadding: EdgeInsets.symmetric(horizontal: 20),
+                contentPadding: const EdgeInsets.symmetric(horizontal: 20),
                 border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(5),
-                    borderSide: BorderSide(
+                    borderSide: const BorderSide(
                       color: Colors.black12,
                       width: 2,
                     )),
                 focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(5),
-                    borderSide: BorderSide(
+                    borderSide: const BorderSide(
                       color: Colors.black,
                       width: 2,
                     )),
                 errorBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(5),
-                    borderSide: BorderSide(
+                    borderSide: const BorderSide(
                       color: Colors.red,
                       width: 2,
                     ))),

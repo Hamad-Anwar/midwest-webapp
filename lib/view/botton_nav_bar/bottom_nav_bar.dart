@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:midwest/res/app_images.dart';
-
 class BottomNavBar extends StatelessWidget {
   const BottomNavBar({super.key});
 
@@ -20,12 +18,12 @@ class BottomNavBar extends StatelessWidget {
 
                 width: 180,
               ),
-              Spacer(),
+              const Spacer(),
              if(MediaQuery.sizeOf(context).width>950) Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text('NEED SUPPORT?',style: TextStyle(color: Colors.grey,fontWeight: FontWeight.bold,fontSize:MediaQuery.sizeOf(context).width>600? 14 : 12),),
-                  SizedBox(height: 20,),
+                  const SizedBox(height: 20,),
                   Text('Official@antikwar.com',style: TextStyle(color: Colors.white,
                       fontFamily: '',
                       fontWeight: FontWeight.bold,fontSize: MediaQuery.sizeOf(context).width>600?15:13),),
@@ -34,13 +32,13 @@ class BottomNavBar extends StatelessWidget {
                       color: Colors.white,fontWeight: FontWeight.bold,fontSize: MediaQuery.sizeOf(context).width>600?15:13),),
                 ],
               ),
-              Spacer(),
+              const Spacer(),
 
               if(MediaQuery.sizeOf(context).width>600) Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text('NEED HELP?',style: TextStyle(color: Colors.grey,fontWeight: FontWeight.bold,fontSize: MediaQuery.sizeOf(context).width>600?14:12),),
-                  SizedBox(height: 20,),
+                  const SizedBox(height: 20,),
                   Text('(+91)1234567890',style: TextStyle(
                       fontFamily: '',
                       color: Colors.white,fontWeight: FontWeight.bold,fontSize: MediaQuery.sizeOf(context).width>600?15:13),),
@@ -50,13 +48,13 @@ class BottomNavBar extends StatelessWidget {
                       color: Colors.white,fontWeight: FontWeight.bold,fontSize: MediaQuery.sizeOf(context).width>600?15:13),),
                 ],
               ),
-              Spacer(),
+              const Spacer(),
               if(MediaQuery.sizeOf(context).width>430) Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text('FOLLOW US',style: TextStyle(color: Colors.grey,fontWeight: FontWeight.bold,fontSize: MediaQuery.sizeOf(context).width>600?15:12),),
-                  SizedBox(height: 20,),
-                  Row(
+                  const SizedBox(height: 20,),
+                  const Row(
                     children: [
                       Icon(FontAwesomeIcons.linkedin,color: Colors.white,size: 20,),
                       SizedBox(width: 15,),
@@ -70,12 +68,12 @@ class BottomNavBar extends StatelessWidget {
             ],
           ),
 
-          if(MediaQuery.sizeOf(context).width<=950) SizedBox(height: 40,),
+          if(MediaQuery.sizeOf(context).width<=950) const SizedBox(height: 40,),
           if(MediaQuery.sizeOf(context).width<=950) Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text('NEED SUPPORT?',style: TextStyle(color: Colors.grey,fontWeight: FontWeight.bold,fontSize: MediaQuery.sizeOf(context).width>600?14:12),),
-              SizedBox(height: 20,),
+              const SizedBox(height: 20,),
               Text('Official@antikwar.com',style: TextStyle(
                   fontFamily: '',
                   color: Colors.white,fontWeight: FontWeight.bold,fontSize: MediaQuery.sizeOf(context).width>600?15:13),),
@@ -84,12 +82,12 @@ class BottomNavBar extends StatelessWidget {
                   fontFamily: '',color: Colors.white,fontWeight: FontWeight.bold,fontSize: MediaQuery.sizeOf(context).width>600?15:13),),
             ],
           ),
-          if(MediaQuery.sizeOf(context).width<=600) SizedBox(height: 40,),
+          if(MediaQuery.sizeOf(context).width<=600) const SizedBox(height: 40,),
           if(MediaQuery.sizeOf(context).width<=600) Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text('NEED HELP?',style: TextStyle(color: Colors.grey,fontWeight: FontWeight.bold,fontSize: MediaQuery.sizeOf(context).width>600?14:12),),
-              SizedBox(height: 20,),
+              const SizedBox(height: 20,),
               Text('(+91)1234567890',style: TextStyle(
                   fontFamily: '',
                   color: Colors.white,fontWeight: FontWeight.bold,fontSize: MediaQuery.sizeOf(context).width>600?15:13),),
@@ -98,13 +96,13 @@ class BottomNavBar extends StatelessWidget {
                   color: Colors.white,fontWeight: FontWeight.bold,fontSize: MediaQuery.sizeOf(context).width>600?15:13),),
             ],
           ),
-          if(MediaQuery.sizeOf(context).width<=600) SizedBox(height: 20,),
+          if(MediaQuery.sizeOf(context).width<=600) const SizedBox(height: 20,),
           if(MediaQuery.sizeOf(context).width<=430) Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text('FOLLOW US',style: TextStyle(color: Colors.grey,fontWeight: FontWeight.bold,fontSize: MediaQuery.sizeOf(context).width>600?15:12),),
-              SizedBox(height: 20,),
-              Row(
+              const SizedBox(height: 20,),
+              const Row(
                 children: [
                   Icon(FontAwesomeIcons.linkedin,color: Colors.white,size: 20,),
                   SizedBox(width: 15,),
@@ -115,12 +113,12 @@ class BottomNavBar extends StatelessWidget {
               )
             ],
           ),
-          SizedBox(height: 30,),
-          Divider(
+          const SizedBox(height: 30,),
+          const Divider(
             color: Colors.white12,
           ),
-          SizedBox(height: 30,),
-          Row(
+          const SizedBox(height: 30,),
+          const Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text('BE A DISTRIBUTEOR',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,

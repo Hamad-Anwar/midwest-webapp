@@ -1,14 +1,10 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:midwest/view/buy_ticket/buy_ticket.dart';
 import 'package:midwest/view/home/components/home_section.dart';
-import 'package:midwest/view/home/home_page.dart';
 import 'package:midwest/view/register_team/register_team.dart';
 import 'package:pod_player/pod_player.dart';
 import 'package:provider/provider.dart';
-import 'package:youtube_player_iframe/youtube_player_iframe.dart';
-
 import '../../res/app_images.dart';
 import '../../view_model/controller/home_controller.dart';
 import '../drawer/drawer.dart';
@@ -30,7 +26,7 @@ class _AboutPageState extends State<AboutPage>{
 
     super.initState();
     aboutVideoPlayer = PodPlayerController(
-      podPlayerConfig: PodPlayerConfig(
+      podPlayerConfig: const PodPlayerConfig(
         autoPlay: false,
       ),
       playVideoFrom: PlayVideoFrom.network(
@@ -43,7 +39,7 @@ class _AboutPageState extends State<AboutPage>{
         });
       },
     );
-    Timer(Duration(milliseconds: 100), () {
+    Timer(const Duration(milliseconds: 100), () {
       try{
         homeVideoController.pause();
         aboutVideoPlayer.pause();
@@ -58,7 +54,7 @@ class _AboutPageState extends State<AboutPage>{
   Widget build(BuildContext context) {
     Provider.of<HomeController>(context,listen: false).init(url: 'https://firebasestorage.googleapis.com/v0/b/midwest-20922.appspot.com/o/video%2FRobot%20Wars-%20Episode%205%20Battle%20Recaps%202017%20-%20BBC%20Two_2.mp4?alt=media&token=871c30f4-5f72-4514-965d-20ac1bdc3e53');
     return Scaffold(
-      drawer: CustomDrawer(),
+      drawer: const CustomDrawer(),
       backgroundColor: Colors.black,
       body: Center(
         child: LayoutBuilder(
@@ -107,10 +103,10 @@ class _AboutPageState extends State<AboutPage>{
                                                 //     value.youtubePlayerControllerAbout!),
                                               ),
                                             )
-                                                : SizedBox();
+                                                : const SizedBox();
                                           },
                                         )),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 40,
                                   ),
                                   Text(
@@ -122,10 +118,10 @@ class _AboutPageState extends State<AboutPage>{
                                             ? 34
                                             : 20),
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 20,
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     width: 450,
                                     child: Text(
                                       'Experience adrenaline-pumping action as you engage in intense battles against players from around the globe. Are you ready to prove your dominance? Immerse yourself in stunning graphics and dynamic gameplay that will transport you into a futuristic world where only the strongest survive.',
@@ -134,7 +130,7 @@ class _AboutPageState extends State<AboutPage>{
                                       ),
                                     ),
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 20,
                                   ),
                                   Column(
@@ -143,11 +139,11 @@ class _AboutPageState extends State<AboutPage>{
                                       Row(
                                         children: [
                                           InkWell(
-                                            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => RegisterTeam(),)),
+                                            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const RegisterTeam(),)),
                                             child: Container(
                                               height: MediaQuery.sizeOf(context).width>600?50:40,
                                               width: MediaQuery.sizeOf(context).width>600?250:180,
-                                              decoration: BoxDecoration(
+                                              decoration: const BoxDecoration(
                                                   image: DecorationImage(
                                                       image: AssetImage(
                                                           AppImages.buttonBg),
@@ -166,14 +162,14 @@ class _AboutPageState extends State<AboutPage>{
                                           ),
                                           if (MediaQuery.sizeOf(context).width >
                                               650)
-                                            SizedBox(
+                                            const SizedBox(
                                               width: 30,
                                             ),
                                           if (MediaQuery.sizeOf(context).width >
                                               650)
                                             InkWell(
                                               onTap: () {
-                                                Navigator.push(context, MaterialPageRoute(builder: (context) => BuyTicket(),));
+                                                Navigator.push(context, MaterialPageRoute(builder: (context) => const BuyTicket(),));
                                               },
                                               child: Container(
                                                 height: MediaQuery.sizeOf(context).width>600?50:40,
@@ -199,20 +195,20 @@ class _AboutPageState extends State<AboutPage>{
                                         ],
                                       ),
                                       if (MediaQuery.sizeOf(context).width <= 650)
-                                        SizedBox(
+                                        const SizedBox(
                                           height: 20,
                                         ),
                                       if (MediaQuery.sizeOf(context).width <= 650)
                                         GestureDetector(
                                           onTap: () {
-                                            Navigator.push(context, MaterialPageRoute(builder: (context) => BuyTicket(),));
+                                            Navigator.push(context, MaterialPageRoute(builder: (context) => const BuyTicket(),));
 
                                           },
                                           child: Container(
                                             height: MediaQuery.sizeOf(context).width>600?50:40,
                                             width:MediaQuery.sizeOf(context).width>600?
                                             200 : 140,
-                                            decoration: BoxDecoration(
+                                            decoration: const BoxDecoration(
                                                 image: DecorationImage(
                                                     image: AssetImage(
                                                         AppImages.buttonBg),
@@ -231,7 +227,7 @@ class _AboutPageState extends State<AboutPage>{
                                         ),
                                     ],
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 40,
                                   ),
                                 ],
@@ -255,10 +251,10 @@ class _AboutPageState extends State<AboutPage>{
                                           //     value.youtubePlayerControllerAbout!),
                                         ),
                                       )
-                                          : SizedBox();
+                                          : const SizedBox();
                                     },
                                   ),),
-                         MediaQuery.sizeOf(context).width>600 ?  SizedBox(width: 100,) : SizedBox(width: 20,),
+                         MediaQuery.sizeOf(context).width>600 ?  const SizedBox(width: 100,) : const SizedBox(width: 20,),
                           ],
                         ),
                       ],

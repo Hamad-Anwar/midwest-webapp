@@ -1,8 +1,4 @@
 import 'dart:async';
-
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:fast_cached_network_image/fast_cached_network_image.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:layout_pro/responsive_layout.dart';
 import 'package:midwest/view/drawer/drawer.dart';
@@ -25,7 +21,7 @@ class _GalleryState extends State<Gallery> {
     // TODO: implement initState
     super.initState();
     Provider.of<GalleryController>(context,listen: false).getData();
-    Timer(Duration(milliseconds: 100), () {
+    Timer(const Duration(milliseconds: 100), () {
       try{
         homeVideoController.pause();
         aboutVideoPlayer.pause();
@@ -38,7 +34,7 @@ class _GalleryState extends State<Gallery> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      drawer: CustomDrawer(),
+      drawer: const CustomDrawer(),
       body: Center(
         child: SafeArea(
           child: LayoutBuilder(
@@ -81,12 +77,12 @@ class _GalleryState extends State<Gallery> {
                             ],
                           ),
                         ),
-                        SizedBox(height: 20,),
+                        const SizedBox(height: 20,),
                         Expanded(
                           child: Consumer<GalleryController>(builder: (context, value, child) {
 
                             if(value.status==DataStatus.loading){
-                              return Center(
+                              return const Center(
                                 child: CircularProgressIndicator(
                                   color: Colors.white,
                                 ),
@@ -94,7 +90,7 @@ class _GalleryState extends State<Gallery> {
                             }
 
                             if(value.status==DataStatus.complete && value.images.isEmpty){
-                              return Center(
+                              return const Center(
                                 child: Text(
                                   'No image availaibe',
                                   style: TextStyle(color: Colors.white),
@@ -108,16 +104,16 @@ class _GalleryState extends State<Gallery> {
                                   child: ResponsiveLayout(
                                     builder: (context, index) {
                                       return Container(
-                                        margin: EdgeInsets.only(right: 10,bottom: 10),
+                                        margin: const EdgeInsets.only(right: 10,bottom: 10),
                                         child: Stack(
                                           fit: StackFit.expand,
                                           children: [
                                             Container(
-                                              decoration: BoxDecoration(
+                                              decoration: const BoxDecoration(
                                                 color: Colors.white12,
                                               ),
                                               alignment: Alignment.center,
-                                              child: SizedBox(
+                                              child: const SizedBox(
                                                 height: 15,
                                                 width: 15,
                                                 child: CircularProgressIndicator(
@@ -133,7 +129,7 @@ class _GalleryState extends State<Gallery> {
                                     itemCount: value.images.length),
                                 );
                             }
-                            return SizedBox();
+                            return const SizedBox();
                           },),
                         )
                       ],

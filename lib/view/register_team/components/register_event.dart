@@ -15,15 +15,15 @@ class RegisterEvent extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
-        Text(
+        const Text(
           'Robowar Event Registration page',
           style: TextStyle(
               color: Colors.black, fontWeight: FontWeight.bold, fontSize: 15),
         ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         InputField(
@@ -31,7 +31,7 @@ class RegisterEvent extends StatelessWidget {
           hint: 'Enter Event Name',
           title: 'Event',
         ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         Row(
@@ -53,7 +53,7 @@ class RegisterEvent extends StatelessWidget {
                 title: 'Team ID',
               ),
             ),
-            SizedBox(
+            const SizedBox(
               width: 10,
             ),
             Expanded(
@@ -65,14 +65,14 @@ class RegisterEvent extends StatelessWidget {
             ),
           ],
         ),
-        SizedBox(height: 20,),
+        const SizedBox(height: 20,),
 
         Consumer<RegisterTeamController>(
           builder: (context, value, child) {
             return value.getPlayerLoading
-                ? SizedBox()
+                ? const SizedBox()
                 : GridView.builder(
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 2, childAspectRatio: 4),
                     itemCount: controller.availablePlayer.length,
                     shrinkWrap: true,
@@ -106,14 +106,14 @@ class RegisterEvent extends StatelessWidget {
                                         controller.availablePlayer[index]
                                                 ['name']
                                             .toString(),
-                                        style: TextStyle(
+                                        style: const TextStyle(
                                             color: Colors.black, fontSize: 12),
                                       ),
                                       Text(
                                         controller.availablePlayer[index]
                                                 ['email']
                                             .toString(),
-                                        style: TextStyle(
+                                        style: const TextStyle(
                                             color: Colors.grey, fontSize: 10),
                                       ),
                                     ],
@@ -133,7 +133,7 @@ class RegisterEvent extends StatelessWidget {
           width: MediaQuery.sizeOf(context).width,
           child: ElevatedButton(
               style: ButtonStyle(
-                  backgroundColor: MaterialStatePropertyAll(Colors.blue),
+                  backgroundColor: const MaterialStatePropertyAll(Colors.blue),
                   shape: MaterialStatePropertyAll(RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(5)))),
               onPressed: () {
@@ -144,10 +144,10 @@ class RegisterEvent extends StatelessWidget {
               },
               child: Consumer<RegisterTeamController>(
                 builder: (context, value, child) {
-                  return value.getPlayerLoading?Center(
+                  return value.getPlayerLoading?const Center(
                     child: SizedBox(height: 15,width: 15,
                       child: CircularProgressIndicator(color: Colors.white,),),
-                  ) : Center(
+                  ) : const Center(
                     child: Text(
                       'Add Players First + ',
                       style: TextStyle(height: 0, color: Colors.white,fontFamily: ''),
@@ -157,7 +157,7 @@ class RegisterEvent extends StatelessWidget {
               )
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         const Text(
@@ -172,7 +172,7 @@ class RegisterEvent extends StatelessWidget {
           onTap: () {
             controller.changeRegister(value: false);
           },
-          child: Text.rich(TextSpan(children: [
+          child: const Text.rich(TextSpan(children: [
             TextSpan(
                 text: 'Click here to ',
                 style: TextStyle(color: Colors.black, fontSize: 11)),
@@ -185,7 +185,7 @@ class RegisterEvent extends StatelessWidget {
             )
           ])),
         ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         SizedBox(
@@ -193,7 +193,7 @@ class RegisterEvent extends StatelessWidget {
           width: 180,
           child: ElevatedButton(
               style: ButtonStyle(
-                  backgroundColor: MaterialStatePropertyAll(Colors.blue),
+                  backgroundColor: const MaterialStatePropertyAll(Colors.blue),
                   shape: MaterialStatePropertyAll(RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(5)))),
               onPressed: () {
@@ -204,20 +204,20 @@ class RegisterEvent extends StatelessWidget {
               },
               child: Consumer<RegisterTeamController>(
                 builder: (context, value, child) {
-                  return value.eventLoading?Center(
+                  return value.eventLoading?const Center(
                     child: SizedBox(height: 15,width: 15,
                     child: CircularProgressIndicator(color: Colors.white,),),
-                  ) : Center(
+                  ) : const Center(
                     child: Text(
                       'Register',
-                      style: TextStyle(height: 0, color: Colors.white,fontFamily: ''),
+                      style: const TextStyle(height: 0, color: Colors.white,fontFamily: ''),
                     ),
                   );
                 },
               )
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
       ],

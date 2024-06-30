@@ -10,7 +10,7 @@ class VideoSection extends StatelessWidget {
       child: GridView.builder(
         shrinkWrap: true,
         itemCount: 2,
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             childAspectRatio: 1.7,
             crossAxisCount: 2),
         itemBuilder: (context, index) {
@@ -22,7 +22,7 @@ class VideoSection extends StatelessWidget {
                 color: Colors.white.withOpacity(.07),
                 borderRadius: BorderRadius.circular(5)),
             alignment: Alignment.center,
-            child: Center(
+            child: const Center(
               child: CircleAvatar(
                 radius: 25,
                 backgroundColor: Colors.red,

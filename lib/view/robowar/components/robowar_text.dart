@@ -5,16 +5,16 @@ class RoboWarText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('WRC BOTS COMBAT',style: TextStyle(
+        const Text('WRC BOTS COMBAT',style: TextStyle(
             fontWeight: FontWeight.bold,
             color: Colors.white,
             fontSize: 30
         ),),
         Padding(
-          padding: const EdgeInsets.symmetric(vertical: 7),
+          padding: EdgeInsets.symmetric(vertical: 7),
           child: Text('August 24th, 2024 - August 27th, 2024',
             style: TextStyle(color: Colors.white70,
                 fontFamily: '',

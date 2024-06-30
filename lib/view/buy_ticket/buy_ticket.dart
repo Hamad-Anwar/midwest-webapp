@@ -26,7 +26,7 @@ class _BuyTicketState extends State<BuyTicket> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    Timer(Duration(milliseconds: 100), () {
+    Timer(const Duration(milliseconds: 100), () {
       try{
         homeVideoController.pause();
         aboutVideoPlayer.pause();
@@ -40,7 +40,7 @@ class _BuyTicketState extends State<BuyTicket> {
     final controller = Provider.of<BuyTicketController>(context);
     return Scaffold(
       backgroundColor: Colors.black,
-      drawer: CustomDrawer(),
+      drawer: const CustomDrawer(),
       body: Center(
         child: LayoutBuilder(
           builder: (context, constraints) {
@@ -109,7 +109,7 @@ class _BuyTicketState extends State<BuyTicket> {
                                     child: Column(
                                       crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
-                                        SizedBox(height: 20),
+                                        const SizedBox(height: 20),
                                         Row(
                                           children: [
                                             Expanded(
@@ -119,22 +119,22 @@ class _BuyTicketState extends State<BuyTicket> {
                                             ),
                                             InkWell(
                                                 onTap: () => Navigator.pop(context),
-                                                child: Icon(Icons.close,color: Colors.black,))
+                                                child: const Icon(Icons.close,color: Colors.black,))
                                           ],
                                         ),
-                                        SizedBox(height: 10),
+                                        const SizedBox(height: 10),
                                         _buildText(
                                           'All India Council for Robowar & Automation is delighted to invite you to 1.0st Edition of\nRobowar World Championship',
                                           color: Colors.black.withOpacity(.5),
                                           fontSize: 12,
                                         ),
-                                        SizedBox(height: 10),
+                                        const SizedBox(height: 10),
                                         _buildText('Robowar Team Registration page',
                                             fontWeight: FontWeight.bold,
                                             fontSize: 17),
-                                        SizedBox(height: 6),
+                                        const SizedBox(height: 6),
                                         _buildDivider(),
-                                        SizedBox(height: 10),
+                                        const SizedBox(height: 10),
                                         _buildInputRow(
                                           'Name',
                                           'Email',
@@ -149,7 +149,7 @@ class _BuyTicketState extends State<BuyTicket> {
                                             return 'Please enter valid email';
                                           },
                                         ),
-                                        SizedBox(height: 10),
+                                        const SizedBox(height: 10),
                                         _buildInputRow(
                                           'Mobile Number',
                                           'City',
@@ -165,11 +165,11 @@ class _BuyTicketState extends State<BuyTicket> {
                                             }
                                           },
                                         ),
-                                        SizedBox(height: 30),
+                                        const SizedBox(height: 30),
                                         _buildSubmitButton(
                                           onTap: () => controller.submit(context),
                                         ),
-                                        SizedBox(
+                                        const SizedBox(
                                           height: 30,
                                         )
                                       ],
@@ -251,7 +251,7 @@ class _BuyTicketState extends State<BuyTicket> {
                 hint: '',
                 controller: controller1,
                 validator: validator1),
-            SizedBox(width: 10),
+            const SizedBox(width: 10),
             if (MediaQuery.sizeOf(context).width > 600)
               _buildInputField(
                   title: title2,
@@ -261,7 +261,7 @@ class _BuyTicketState extends State<BuyTicket> {
           ],
         ),
         if (MediaQuery.sizeOf(context).width <= 600 && title2.isNotEmpty)
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
         if (MediaQuery.sizeOf(context).width <= 600 && title2.isNotEmpty)
@@ -292,7 +292,7 @@ class _BuyTicketState extends State<BuyTicket> {
           color: Colors.red,
         ),
         alignment: Alignment.center,
-        child: Text(
+        child: const Text(
           'SUBMIT',
           style: TextStyle(
             color: Colors.white,

@@ -27,7 +27,7 @@ class _RoboWarState extends State<RoboWar> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    Timer(Duration(milliseconds: 100), () {
+    Timer(const Duration(milliseconds: 100), () {
       try{
         homeVideoController.pause();
         aboutVideoPlayer.pause();
@@ -40,7 +40,7 @@ class _RoboWarState extends State<RoboWar> {
   Widget build(BuildContext context) {
     var controller = Provider.of<RoboWarController>(context, listen: false);
     return Scaffold(
-      drawer: CustomDrawer(),
+      drawer: const CustomDrawer(),
       backgroundColor: Colors.black,
       body: Center(child: LayoutBuilder(
         builder: (context, constraints) {
@@ -60,7 +60,7 @@ class _RoboWarState extends State<RoboWar> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       const TopAppBar(),
-                      SizedBox(height: 20,),
+                      const SizedBox(height: 20,),
                       Expanded(
                         child: RawScrollbar(
                           controller: scrollController,
@@ -74,7 +74,7 @@ class _RoboWarState extends State<RoboWar> {
                           child: Row(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              SizedBox(width: 20,),
+                              const SizedBox(width: 20,),
                               Expanded(
                                   flex: 3,
                                   child: SingleChildScrollView(
@@ -84,12 +84,12 @@ class _RoboWarState extends State<RoboWar> {
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
                                       Padding(
-                                        padding: EdgeInsets.symmetric(horizontal: 20),
+                                        padding: const EdgeInsets.symmetric(horizontal: 20),
                                         child: Column(
                                           crossAxisAlignment: CrossAxisAlignment.start,
                                           children: [
-                                            RoboWarText(),
-                                            SizedBox(
+                                            const RoboWarText(),
+                                            const SizedBox(
                                               height: 20,
                                             ),
                                             Consumer<RoboWarController>(
@@ -97,7 +97,7 @@ class _RoboWarState extends State<RoboWar> {
                                                 return AnimatedContainer(
                                                   width: double.infinity,
                                                   height: controller.containerOne ? 300 : 50,
-                                                  duration: Duration(milliseconds: 100),
+                                                  duration: const Duration(milliseconds: 100),
                                                   child: Column(
                                                     crossAxisAlignment:
                                                     CrossAxisAlignment.start,
@@ -112,22 +112,22 @@ class _RoboWarState extends State<RoboWar> {
                                                               borderRadius:
                                                               BorderRadius.circular(5),
                                                               color: Colors.red),
-                                                          padding: EdgeInsets.symmetric(
+                                                          padding: const EdgeInsets.symmetric(
                                                               horizontal: 20),
                                                           child: Row(
                                                             children: [
-                                                              Text(
+                                                              const Text(
                                                                 'How to get on robowar',
                                                                 style: TextStyle(
                                                                     color: Colors.white,
                                                                 fontFamily: ''
                                                                 ),
                                                               ),
-                                                              Spacer(),
-                                                              controller.containerOne? Icon(
+                                                              const Spacer(),
+                                                              controller.containerOne? const Icon(
                                                                 Icons.remove,
                                                                 color: Colors.white,
-                                                              ): Icon(
+                                                              ): const Icon(
                                                                 Icons.add,
                                                                 color: Colors.white,
                                                               )
@@ -135,7 +135,7 @@ class _RoboWarState extends State<RoboWar> {
                                                           ),
                                                         ),
                                                       ),
-                                                      Expanded(child: SingleChildScrollView(
+                                                      const Expanded(child: SingleChildScrollView(
                                                         child: Column(
                                                           crossAxisAlignment: CrossAxisAlignment.start,
                                                           children: [
@@ -157,7 +157,7 @@ class _RoboWarState extends State<RoboWar> {
                                                               children: [
                                                                 Padding(
                                                                   padding:
-                                                                  const EdgeInsets.only(top: 5),
+                                                                  EdgeInsets.only(top: 5),
                                                                   child: CircleAvatar(
                                                                     radius: 4,
                                                                     backgroundColor: Colors.white,
@@ -186,7 +186,7 @@ class _RoboWarState extends State<RoboWar> {
                                                               children: [
                                                                 Padding(
                                                                   padding:
-                                                                  const EdgeInsets.only(top: 5),
+                                                                  EdgeInsets.only(top: 5),
                                                                   child: CircleAvatar(
                                                                     radius: 4,
                                                                     backgroundColor: Colors.white,
@@ -215,7 +215,7 @@ class _RoboWarState extends State<RoboWar> {
                                                               children: [
                                                                 Padding(
                                                                   padding:
-                                                                  const EdgeInsets.only(top: 5),
+                                                                  EdgeInsets.only(top: 5),
                                                                   child: CircleAvatar(
                                                                     radius: 4,
                                                                     backgroundColor: Colors.white,
@@ -245,7 +245,7 @@ class _RoboWarState extends State<RoboWar> {
                                                               children: [
                                                                 Padding(
                                                                   padding:
-                                                                  const EdgeInsets.only(top: 5),
+                                                                  EdgeInsets.only(top: 5),
                                                                   child: CircleAvatar(
                                                                     radius: 4,
                                                                     backgroundColor: Colors.white,
@@ -273,7 +273,7 @@ class _RoboWarState extends State<RoboWar> {
                                                 );
                                               },
                                             ),
-                                            SizedBox(
+                                            const SizedBox(
                                               height: 20,
                                             ),
                                             Consumer<RoboWarController>(
@@ -281,7 +281,7 @@ class _RoboWarState extends State<RoboWar> {
                                                 return AnimatedContainer(
                                                   width: double.infinity,
                                                   height: controller.containerTwo ? 350 : 50,
-                                                  duration: Duration(milliseconds: 100),
+                                                  duration: const Duration(milliseconds: 100),
                                                   child: Column(
                                                     crossAxisAlignment:
                                                     CrossAxisAlignment.start,
@@ -296,20 +296,20 @@ class _RoboWarState extends State<RoboWar> {
                                                               borderRadius:
                                                               BorderRadius.circular(5),
                                                               color: Colors.red),
-                                                          padding: EdgeInsets.symmetric(
+                                                          padding: const EdgeInsets.symmetric(
                                                               horizontal: 20),
                                                           child: Row(
                                                             children: [
-                                                              Text(
+                                                              const Text(
                                                                 'The Bot',
                                                                 style: TextStyle(
                                                                     color: Colors.white,fontFamily: ''),
                                                               ),
-                                                              Spacer(),
-                                                              controller.containerTwo? Icon(
+                                                              const Spacer(),
+                                                              controller.containerTwo? const Icon(
                                                                 Icons.remove,
                                                                 color: Colors.white,
-                                                              ): Icon(
+                                                              ): const Icon(
                                                                 Icons.add,
                                                                 color: Colors.white,
                                                               )
@@ -317,7 +317,7 @@ class _RoboWarState extends State<RoboWar> {
                                                           ),
                                                         ),
                                                       ),
-                                                      Expanded(child: SingleChildScrollView(
+                                                      const Expanded(child: SingleChildScrollView(
                                                         child: Column(
                                                           crossAxisAlignment: CrossAxisAlignment.start,
                                                           children: [
@@ -349,7 +349,7 @@ class _RoboWarState extends State<RoboWar> {
                                                               children: [
                                                                 Padding(
                                                                   padding:
-                                                                  const EdgeInsets.only(top: 5),
+                                                                  EdgeInsets.only(top: 5),
                                                                   child: CircleAvatar(
                                                                     radius: 4,
                                                                     backgroundColor: Colors.white,
@@ -378,7 +378,7 @@ class _RoboWarState extends State<RoboWar> {
                                                               children: [
                                                                 Padding(
                                                                   padding:
-                                                                  const EdgeInsets.only(top: 5),
+                                                                  EdgeInsets.only(top: 5),
                                                                   child: CircleAvatar(
                                                                     radius: 4,
                                                                     backgroundColor: Colors.white,
@@ -408,7 +408,7 @@ class _RoboWarState extends State<RoboWar> {
                                                               children: [
                                                                 Padding(
                                                                   padding:
-                                                                  const EdgeInsets.only(top: 5),
+                                                                  EdgeInsets.only(top: 5),
                                                                   child: CircleAvatar(
                                                                     radius: 4,
                                                                     backgroundColor: Colors.white,
@@ -437,7 +437,7 @@ class _RoboWarState extends State<RoboWar> {
                                                               children: [
                                                                 Padding(
                                                                   padding:
-                                                                  const EdgeInsets.only(top: 5),
+                                                                  EdgeInsets.only(top: 5),
                                                                   child: CircleAvatar(
                                                                     radius: 4,
                                                                     backgroundColor: Colors.white,
@@ -464,7 +464,7 @@ class _RoboWarState extends State<RoboWar> {
                                                   ),
                                                 );
                                               },
-                                            ),SizedBox(
+                                            ),const SizedBox(
                                               height: 20,
                                             ),
                                             Consumer<RoboWarController>(
@@ -472,7 +472,7 @@ class _RoboWarState extends State<RoboWar> {
                                                 return AnimatedContainer(
                                                   width: double.infinity,
                                                   height: controller.containerThree ? 1050 : 50,
-                                                  duration: Duration(milliseconds: 100),
+                                                  duration: const Duration(milliseconds: 100),
                                                   child: Column(
                                                     crossAxisAlignment:
                                                     CrossAxisAlignment.start,
@@ -487,20 +487,20 @@ class _RoboWarState extends State<RoboWar> {
                                                               borderRadius:
                                                               BorderRadius.circular(5),
                                                               color: Colors.red),
-                                                          padding: EdgeInsets.symmetric(
+                                                          padding: const EdgeInsets.symmetric(
                                                               horizontal: 20),
                                                           child: Row(
                                                             children: [
-                                                              Text(
+                                                              const Text(
                                                                 'The Battlebox (Arena)',
                                                                 style: TextStyle(
                                                                     color: Colors.white,fontFamily: ''),
                                                               ),
-                                                              Spacer(),
-                                                              controller.containerThree? Icon(
+                                                              const Spacer(),
+                                                              controller.containerThree? const Icon(
                                                                 Icons.remove,
                                                                 color: Colors.white,
-                                                              ): Icon(
+                                                              ): const Icon(
                                                                 Icons.add,
                                                                 color: Colors.white,
                                                               )
@@ -509,17 +509,17 @@ class _RoboWarState extends State<RoboWar> {
                                                         ),
                                                       ),
                                                       Expanded(child: SingleChildScrollView(
-                                                        physics: NeverScrollableScrollPhysics(),
+                                                        physics: const NeverScrollableScrollPhysics(),
                                                         child: Column(
                                                           crossAxisAlignment: CrossAxisAlignment.start,
                                                           children: [
-                                                            SizedBox(height: 20,),
-                                                            Text('The BattleBox is a fully enclosed 40-feet by 40-feet rectangle raised 1 feet off the ground. The BattleBox floor is approximately level but is not guaranteed to be flat or smooth. The BattleBox employs certain “Hazards” and other obstacles that can block, damage, and/or disable a Bot. The BattleBox may also contain debris and/or have damage from previous Matches. Competitors are encouraged to use the Hazards and obstacles to their advantage. However, TechnoXian. is not responsible for any Bot damage caused by the BattleBox itself, the Hazards, or debris within the BattleBox.',
+                                                            const SizedBox(height: 20,),
+                                                            const Text('The BattleBox is a fully enclosed 40-feet by 40-feet rectangle raised 1 feet off the ground. The BattleBox floor is approximately level but is not guaranteed to be flat or smooth. The BattleBox employs certain “Hazards” and other obstacles that can block, damage, and/or disable a Bot. The BattleBox may also contain debris and/or have damage from previous Matches. Competitors are encouraged to use the Hazards and obstacles to their advantage. However, TechnoXian. is not responsible for any Bot damage caused by the BattleBox itself, the Hazards, or debris within the BattleBox.',
                                                               style: TextStyle(color: Colors.white,
                                                                   fontFamily: ''
 
                                                               ),),
-                                                            SizedBox(
+                                                            const SizedBox(
                                                               height: 400,
                                                               width: double.infinity,
                                                               child:  ModelViewer(
@@ -539,17 +539,17 @@ class _RoboWarState extends State<RoboWar> {
                                                 );
                                               },
                                             ),
-                                            BottomNavBar()
+                                            const BottomNavBar()
 
                                           ],
                                         ),
                                       )
                                     ]),
                               )),
-                              SizedBox(width: 20,),
+                              const SizedBox(width: 20,),
                             if(MediaQuery.sizeOf(context).width>1125)  Expanded(child: Container(
                                 height: double.infinity,
-                                margin: EdgeInsets.only(bottom: 50,top: 50),
+                                margin: const EdgeInsets.only(bottom: 50,top: 50),
                                 decoration: BoxDecoration(
                                   color: Colors.white.withOpacity(.07),
                                   border: Border.all(
@@ -557,8 +557,8 @@ class _RoboWarState extends State<RoboWar> {
                                   ),
                                   borderRadius: BorderRadius.circular(5)
                                 ),
-                                padding: EdgeInsets.symmetric(horizontal: 20),
-                                child: SingleChildScrollView(
+                                padding: const EdgeInsets.symmetric(horizontal: 20),
+                                child: const SingleChildScrollView(
                                   child: Column(
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
@@ -583,7 +583,7 @@ class _RoboWarState extends State<RoboWar> {
                                   ),
                                 ),
                               )),
-                              SizedBox(width: 20,)
+                              const SizedBox(width: 20,)
                             ],
                           ),
                         ),
